@@ -21,12 +21,12 @@ summary(autompg)
 str(autompg)
 
 ## correlation matrix
-cor(autompg[, 1:7])  ## note the use of indexing to pull only numerical columns
-
-p = ggplot(trainset, aes(disp, mpg, colour=year)) + geom_point()
-p = ggplot(trainset, aes)
-p
-
+# cor(autompg[, 1:7])  ## note the use of indexing to pull only numerical columns
+# 
+# p = ggplot(trainset, aes(disp, mpg, colour=year)) + geom_point()
+# p = ggplot(trainset, aes)
+# p
+# 
 
 
 
