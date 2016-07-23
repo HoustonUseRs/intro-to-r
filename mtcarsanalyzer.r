@@ -36,13 +36,14 @@ head(mtcarstbl)
 str(mtcarstbl)
 summary(mtcarstbl)
 
-## recast some data
+## recast some data to factors
 mtcarstbl$cyl = as.factor(mtcarstbl$cyl)
 mtcarstbl$gear = as.factor(mtcarstbl$gear)
 mtcarstbl$carb = as.factor(mtcarstbl$carb)
+mtcarstbl$am = as.factor(mtcarstbl$am)
 
 ## let's make some pretty pictures
 ggpairs(mtcarstbl[,2:5], colour='carb')
 ggplot(mtcarstbl, aes(hp, mpg, colour=cyl)) + geom_point()
 ggplot(mtcarstbl, aes(hp, cyl)) + geom_point()
-
+ggplot(mtcarstbl, aes(am, mpg, colour=cyl)) + geom_point()
