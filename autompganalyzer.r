@@ -4,6 +4,11 @@ library(GGally)
 # autompg analysis
 ## read in 
 autompg <- read.csv('https://www3.epa.gov/fueleconomy/testcars/database/16tstcar.csv', header=TRUE)
+cols <- read.table('colnames.txt')
+
+autompg <- autompg[, cols$V3]
+
+names(autompg) <- cols$V1
 
 ## sample data to create testset and trainset...75% to trainset and 25% to testset
 numrows = nrow(autompg)
